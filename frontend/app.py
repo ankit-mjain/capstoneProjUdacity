@@ -11,11 +11,13 @@ app = Flask(__name__)
 
 def index():
     ''' Function to call another api for computing SHA'''
+
     # return "Hello World"
 #    if request.method == "POST":
 #        first_name = request.form.get("fname")
 #        last_name = request.form.get("lname")
 #        return f"Your name is: {first_name} {last_name}"
+
 #    pdb.set_trace()
 
     if request.method == "POST":
