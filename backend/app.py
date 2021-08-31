@@ -1,7 +1,7 @@
 """ This is a code to compute SHA for any input """
 
 import hashlib
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, jsonify
 from flask_restful import Resource, Api
 
 app = Flask(__name__)
