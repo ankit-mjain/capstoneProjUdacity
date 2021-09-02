@@ -12,9 +12,9 @@ lint:
 	pylint --disable=R,C,W1203 frontend/*.py backend/*.py
 
 deploy:
-	python3 frontend/app.py & 
-	python3 backend/app.py & 
-	
+	docker build -t frontend -f ~/environment/capstoneProjUdacity/frontend/Dockerfile .
+	docker build -t backend -f ~/environment/capstoneProjUdacity/backend/Dockerfile .
+
 test:
 
 all:

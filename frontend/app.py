@@ -1,7 +1,7 @@
 """ This is a tutorial code for flask """
 
 # import pdb
-
+import os
 from flask import Flask, render_template, request
 import requests
 
@@ -34,6 +34,8 @@ def index():
         return f"Your HASH name is: {resp.json()['HashName']}"
 
     return render_template("index.html")
+
+# app.run(host=os.getenv('IP', '0.0.0.0'), port=int(os.getenv('PORT', 5000)))
 
 if __name__ == "__main__":
     app.run(debug=True)
