@@ -1,8 +1,9 @@
-FROM python:3.8-buster
+FROM python:3.8-slim
 
-WORKDIR /usr/src/backend-app
+WORKDIR ./backend
 
-COPY ./backend/requirements.txt ./
+COPY ./requirements.txt ./ 
+
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./backend/ .

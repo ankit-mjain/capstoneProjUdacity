@@ -39,19 +39,5 @@ class SHA(Resource):
 
 api.add_resource(SHA,'/SHA/<string:name>')
 
-#def index():
-#    # return "Hello World"
-#    if request.method == "POST":
-#        first_name = request.form.get("fname")
-#        last_name = request.form.get("lname")
-#        full_name = first_name + last_name
-#
-#        result = hashlib.sha256(full_name.encode())
-#        print(result.hexdigest())
-#
-#        return f"Your hash name is: {result.hexdigest()}"
-
-#    return render_template("index.html")
-
 if __name__ == "__main__":
-    app.run(debug=True, port=5001)
+    app.run(debug=True, host = '0.0.0.0', port=5001)

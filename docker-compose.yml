@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  frontend:
+    image: frontend
+    build: 
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    container_name: frontend
+    links:
+      - backend
+    depends_on:
+      - backend
+    restart: always
+    ports:
+      - "5000:5000"
+    networks:
+      - hostnet
+
+  backend:
+    image: backend
+    build: 
+      context: .
+      dockerfile: ./backend/Dockerfile
+    container_name: backend
+    restart: always
+    ports:
+      - "5001:5001"
+    networks:
+      - hostnet
+
+networks:
+  hostnet:
+    driver: "bridge"
