@@ -21,6 +21,11 @@ build-frontend:
 build-backend:
 	docker build -t backend -f ./backend/Dockerfile .
 
+deploy-frontend:
+
+deploy-backend:
+
+
 test:
 
 all:

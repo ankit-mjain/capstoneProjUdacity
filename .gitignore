@@ -1,0 +1,4 @@
+# Ignore virtual env.
+.finalProj
+JenkinsServerKey.pem
+Jenkins.txt
