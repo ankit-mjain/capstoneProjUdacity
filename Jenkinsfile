@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Build'){
             steps{
-                sh 'pwd; docker-compose up'
+                sh 'pwd; sudo make build'
                 echo 'Building the application'
             }
         }
