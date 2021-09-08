@@ -9,7 +9,8 @@ setup:
 install:
 	python3 -m pip install --upgrade pip && \
 		python3 -m pip install -r requirements.txt
-	python3 -m pip install wheel, pylint
+	python3 -m pip install wheel
+	python3 -m pip install pylint
 		
 lint:
 	pylint --disable=R,C,W1203 frontend/*.py backend/*.py
