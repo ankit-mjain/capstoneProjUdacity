@@ -21,11 +21,17 @@ build-frontend:
 build-backend:
 	docker build -t backend -f ./backend/Dockerfile .
 
+<<<<<<< HEAD
 deploy-frontend:
 
 deploy-backend:
 
 
+||||||| be743a2
+=======
+deploy-frontend:
+
+>>>>>>> c1659e09b993db43e8d78333c78cf50145d8b361
 test:
 
 all:
