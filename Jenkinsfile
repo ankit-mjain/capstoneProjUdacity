@@ -8,9 +8,16 @@ pipeline {
                 echo 'Initial Setup done for the project'
             }
         }
-        stage('Build'){
+        stage('Install'){
             steps{
-                echo 'Building the application'
+                sh 'make install'
+                echo 'Installed the python dependencies'
+            }
+        }
+        stage('Lint'){
+            steps{
+                sh 'make install'
+                echo 'Linting the application complete'
             }
         }
         stage('Test'){
