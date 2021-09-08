@@ -1,7 +1,7 @@
 #!/bin/bash
 
 setup:
- 	sudo apt-get install -y python3.8 python3.8-dev python3.8-venv
+	sudo apt-get install -y python3.8 python3.8-dev python3.8-venv
 	python3 -m venv ~/.venv
 	sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v2.7.0/hadolint-Darwin-x86_64
 	sudo chmod +x /bin/hadolint
