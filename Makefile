@@ -16,17 +16,17 @@ lint:
 	/bin/hadolint ./frontend/Dockerfile
 	/bin/hadolint ./backend/Dockerfile
 
-# build-frontend:
-# 	docker build -t frontend -f ./frontend/Dockerfile .
+build-frontend:
+	docker build -t frontend -f ./frontend/Dockerfile .
 
-# build-backend:
-# 	docker build -t backend -f ./backend/Dockerfile .
+build-backend:
+	docker build -t backend -f ./backend/Dockerfile .
 
-build:
-	docker-compose build
+# build:
+# 	docker-compose build
 
-deploy:
-	docker-compose up
+# deploy:
+# 	docker-compose up
 
 test:
 

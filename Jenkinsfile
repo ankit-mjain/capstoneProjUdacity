@@ -25,10 +25,16 @@ pipeline {
                 echo 'Linting the application complete'
             }
         }
-        stage('Build'){
+        stage('Build-frontend'){
             steps{
-                sh 'pwd; sudo make build'
-                echo 'Building the application'
+                sh 'make build-frontend'
+                echo 'Building frontend of the application'
+            }
+        }
+        stage('Build-backend'){
+            steps{
+                sh 'make build-backend'
+                echo 'Building backend of the application'
             }
         }
         stage('Test'){
