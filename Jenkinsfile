@@ -37,6 +37,12 @@ pipeline {
                 echo 'Building backend of the application'
             }
         }
+        stage('Upload-DockerHub'){
+            steps{
+                sh 'make upload-dockerhub'
+                echo 'Testing the application'
+            }
+        }
         stage('Test'){
             steps{
                 echo 'Testing the application'
