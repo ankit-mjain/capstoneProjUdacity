@@ -5,6 +5,7 @@ pipeline {
         stage('Setup'){
             steps{
                 sh 'make setup'
+                echo 'Initial Setup done for the project'
             }
         }
         stage('Build'){
