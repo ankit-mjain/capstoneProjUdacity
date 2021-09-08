@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Build'){
             steps{
-                sh 'make build'
+                sh 'pwd'
                 echo 'Building the application'
             }
         }
