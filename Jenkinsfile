@@ -25,6 +25,12 @@ pipeline {
                 echo 'Linting the application complete'
             }
         }
+        stage('Build'){
+            steps{
+                sh 'make build'
+                echo 'Building the application'
+            }
+        }
         stage('Test'){
             steps{
                 echo 'Testing the application'
