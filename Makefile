@@ -10,8 +10,6 @@ install:
 	python3 -m pip install --upgrade pip && \
 		python3 -m pip install -r requirements.txt
 	python3 -m install wheel
-	sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
-	sudo chmod +x /bin/hadolint
 		
 lint:
 	pylint --disable=R,C,W1203 frontend/*.py backend/*.py
