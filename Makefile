@@ -5,6 +5,9 @@ setup:
 	python3 -m venv ~/.venv
 	sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v2.7.0/hadolint-Linux-x86_64
 	sudo chmod +x /bin/hadolint
+	sudo apt install unzip
+	sudo apt install glibc-source
+	sudo apt install awscli
 	
 install:
 	python3 -m pip install --upgrade pip && \
