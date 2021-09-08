@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Lint'){
             steps{
-                sh 'make install'
+                sh 'make lint'
                 echo 'Linting the application complete'
             }
         }
