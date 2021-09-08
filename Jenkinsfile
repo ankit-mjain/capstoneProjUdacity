@@ -8,7 +8,7 @@ pipeline {
             steps{
                 sh 'make setup'
                 withAWS(credentials:'aws-credentials-for-jenkins-user'){
-                    echo 'aws --version'
+                    sh 'aws --version'
                 }
                 echo 'Initial Setup done for the project'
             }
