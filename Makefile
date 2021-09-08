@@ -9,29 +9,27 @@ setup:
 install:
 	python3 -m pip install --upgrade pip && \
 		python3 -m pip install -r requirements.txt
+	python3 -m install wheel
+	sudo wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64
+	sudo chmod +x /bin/hadolint
 		
 lint:
 	pylint --disable=R,C,W1203 frontend/*.py backend/*.py
 	/bin/hadolint ./frontend/Dockerfile
 	/bin/hadolint ./backend/Dockerfile
 
-build-frontend:
-	docker build -t frontend -f ./frontend/Dockerfile .
+# build-frontend:
+# 	docker build -t frontend -f ./frontend/Dockerfile .
 
-build-backend:
-	docker build -t backend -f ./backend/Dockerfile .
+# build-backend:
+# 	docker build -t backend -f ./backend/Dockerfile .
 
-<<<<<<< HEAD
-deploy-frontend:
+build:
+	docker-compose build
 
-deploy-backend:
+deploy:
+	docker-compose up
 
-
-||||||| be743a2
-=======
-deploy-frontend:
-
->>>>>>> c1659e09b993db43e8d78333c78cf50145d8b361
 test:
 
 all:
