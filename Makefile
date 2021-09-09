@@ -23,7 +23,7 @@ build-backend:
 	sudo docker build -t backend -f ./backend/Dockerfile .
 
 upload-dockerhub:
-	./upload_docker.sh
+	sudo ./upload_docker.sh
 
 # build:
 # 	docker-compose build
