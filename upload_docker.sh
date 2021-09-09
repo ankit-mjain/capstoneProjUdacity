@@ -12,8 +12,10 @@ dockerpath="ankit4all/capstoneprojudacity"
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 docker login
-docker tag project4:latest ankit4all/capstoneprojudacity:latest
+docker tag frontend:latest ankit4all/capstoneprojudacity:frontend
+docker tag backend:latest ankit4all/capstoneprojudacity:backend
 
 # Step 3:
 # Push image to a docker repository
-docker push $dockerpath:latest
+docker push $dockerpath:frontend
+docker push $dockerpath:backend
