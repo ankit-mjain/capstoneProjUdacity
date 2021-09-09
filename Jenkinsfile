@@ -40,8 +40,8 @@ pipeline {
         stage('Upload-DockerHub'){
             steps{
                 withCredentials([usernamePassword(credentialsId:'docker-creds', usernameVariable:'USERNAME', passwordVariable:'PASSWORD')]){
-                    echo '$USERNAME'
-                    echo 'PASSWORD'
+                    echo '${USERNAME}'
+                    echo '${PASSWORD}'
                 }
                 echo 'Testing the application'
             }
