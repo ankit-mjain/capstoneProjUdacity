@@ -40,7 +40,7 @@ pipeline {
         stage('Publish-2-DockerHub'){
             steps{
                 withCredentials([usernamePassword(credentialsId:'docker-creds', usernameVariable:'USERNAME', passwordVariable:'PASSWORD')]){
-                    sh 'sudo docker login -u ${USERNAME} --password-stdin ${PASSWORD}'
+                    sh 'sudo docker login -u ${USERNAME} --password ${PASSWORD}'
                     sh 'make publish-to-dockerhub'
                 }
             }
