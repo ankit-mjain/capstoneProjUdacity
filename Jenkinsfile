@@ -39,7 +39,10 @@ pipeline {
         }
         stage('Upload-DockerHub'){
             steps{
-                sh 'make upload-dockerhub'
+                withCredentials([usernamePassword(credentialsID:'docker-creds', usernameVariable:'USERNAME', passwordVariable:'PASSWORD')]){
+                    echo '$USERNAME'
+                    echo 'PASSWORD'
+                }
                 echo 'Testing the application'
             }
         }
