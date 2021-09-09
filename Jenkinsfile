@@ -37,12 +37,12 @@ pipeline {
                 echo 'Building backend of the application'
             }
         }
-        stage('Upload-DockerHub'){
+        stage('Publish-2-DockerHub'){
             steps{
                 withCredentials([usernamePassword(credentialsId:'docker-creds', usernameVariable:'USERNAME', passwordVariable:'PASSWORD')]){
-                    sh 'sudo docker login -u ${USERNAME} -p ${PASSWORD}'
+                    sh 'sudo docker login -u ${USERNAME} --password-stdin ${PASSWORD}'
+                    sh 'make publish-to-dockerhub'
                 }
-                echo 'Testing the application'
             }
         }
         stage('Test'){

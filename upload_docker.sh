@@ -11,7 +11,7 @@ dockerpath="ankit4all/capstoneprojudacity"
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker login
+# docker login
 docker tag frontend:latest ankit4all/capstoneprojudacity:frontend
 docker tag backend:latest ankit4all/capstoneprojudacity:backend
 

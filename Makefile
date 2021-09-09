@@ -22,7 +22,7 @@ build-frontend:
 build-backend:
 	sudo docker build -t backend -f ./backend/Dockerfile .
 
-upload-dockerhub:
+publish-to-dockerhub:
 	sudo ./upload_docker.sh
 
 # build:
