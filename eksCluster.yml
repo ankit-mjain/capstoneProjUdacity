@@ -11,5 +11,5 @@ availabilityZones: ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
 managedNodeGroups:
   - name: upplNodeGroup
     desiredCapacity: 3
-    instanceType: t2.micro
+    instanceType: t2.small
     volumeSize: 8
