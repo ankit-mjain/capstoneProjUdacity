@@ -45,9 +45,9 @@ pipeline {
                 }
             }
         }
-        stage('Test'){
+        stage('SetupK8sCluster'){
             steps{
-                echo 'Testing the application'
+                sh 'eksctl create cluster -f eksCluster.yml'
             }
         }
         stage('Deploy'){

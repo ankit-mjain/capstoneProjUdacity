@@ -1,0 +1,15 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+    name: uppl_cluster
+    region: ap-south-1
+    version: "1.21"
+
+availabilityZones: ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
+
+managedNodeGroups:
+  - name: uppl_nodegroup
+    desiredCapacity: 3
+    instanceType: t2.micro
+    volumeSize: 8
