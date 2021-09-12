@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: udapeople
@@ -22,7 +22,7 @@ spec:
         - containerPort: 5000
 
 ---
-apiVersion: v1
+apiVersion: apps/v1
 kind: Service
 metadata:
   name: udapeople-frontend
