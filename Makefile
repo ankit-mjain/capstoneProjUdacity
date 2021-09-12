@@ -25,13 +25,7 @@ build-backend:
 publish-to-dockerhub:
 	sudo ./upload_docker.sh
 
-# build:
-# 	docker-compose build
-
-# deploy:
-# 	docker-compose up
-
-test:
+deploy:
 
 all:
 	install test lint

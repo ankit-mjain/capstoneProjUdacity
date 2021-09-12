@@ -48,6 +48,8 @@ pipeline {
         stage('Deploy'){
             steps{
                 withKubeConfig([credentialsId: '48c0722b-f1ed-4a95-95b7-a9f7a4fb4aad']){
+                    sh 'curl -LO "curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+                    sh 'chmod u+x ./kubectl'  
                     sh '/home/ubuntu/bin/kubectl get pods'
                 }
             }
