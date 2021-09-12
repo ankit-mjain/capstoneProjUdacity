@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ankit4all/capstoneprojudacity:frontend
+        image: docker.io/ankit4all/capstoneprojudacity:frontend
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
