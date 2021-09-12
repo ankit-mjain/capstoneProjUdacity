@@ -6,10 +6,10 @@ metadata:
     region: ap-south-1
     version: "1.21"
 
-availabilityZones: ["ap-south-1a", "ap-south-1b", "ap-south-1c"]
+availabilityZones: ["ap-south-1a", "ap-south-1b"]
 
 managedNodeGroups:
   - name: upplNodeGroup
-    desiredCapacity: 3
-    instanceType: t2.small
+    desiredCapacity: 2
+    instanceType: t2.micro
     volumeSize: 8
