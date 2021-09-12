@@ -46,6 +46,9 @@ pipeline {
             }
         }
         stage('Deploy'){
+            withKubeConfig([credentialsId: '48c0722b-f1ed-4a95-95b7-a9f7a4fb4aad']){
+                sh '/home/ubuntu/bin/kubectl get pods'
+            }
             steps{
                 sh '/home/ubuntu/bin/kubectl apply -f deployment.yml'
             }
