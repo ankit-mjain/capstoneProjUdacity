@@ -2,9 +2,9 @@ FROM python:3.8-slim
 
 WORKDIR /frontend
 
-COPY ./requirements.txt ./ 
+CPY ./requirements.txt ./ 
 
-RUN pip instll --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./frontend/ .
 
