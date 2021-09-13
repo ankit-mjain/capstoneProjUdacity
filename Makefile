@@ -26,6 +26,7 @@ publish-to-dockerhub:
 	sudo ./upload_docker.sh
 
 deploy:
+	kubectl apply -f ./deployment.yml
 
 all:
 	install test lint

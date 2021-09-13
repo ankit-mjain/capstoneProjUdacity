@@ -60,7 +60,7 @@ pipeline {
         stage('Deploy-frontend'){
             steps{
                 withAWS(region:'ap-south-1', credentials:'AWSCreds'){
-                    sh 'kubectl apply -f deployment.xml'
+                    sh 'make deploy'
                 }
             }
         }
