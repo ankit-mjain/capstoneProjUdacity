@@ -51,6 +51,7 @@ pipeline {
                     sh 'curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/kubectl'
                     sh 'chmod +x ./kubectl'
                     sh 'sudo mv ./kubectl /usr/local/bin'
+                    sh 'aws eks --region region update-kubeconfig --name upplCluster'
                     sh 'kubectl config use-context arn:aws:eks:ap-south-1:858493975654:cluster/upplCluster'
                     sh 'kubectl config view'
                 }
