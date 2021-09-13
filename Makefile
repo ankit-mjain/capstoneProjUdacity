@@ -25,8 +25,10 @@ build-backend:
 publish-to-dockerhub:
 	sudo ./upload_docker.sh
 
-deploy:
+deploy-blue:
 	kubectl apply -f ./blue-deployment.yml
 
+deploy-green:
+	kubectl apply -f ./green-deployment.yml
 all:
 	install test lint

@@ -60,7 +60,7 @@ pipeline {
         stage('Deploy-Blue'){
             steps{
                 withAWS(region:'ap-south-1', credentials:'AWSCreds'){
-                    sh 'make deploy'
+                    sh 'make deploy-blue'
                 }
             }
         }
@@ -70,6 +70,13 @@ pipeline {
                     sh 'kubectl get service/blue-udapeople-frontend'
                 }
                 input "Do the results look good? "
+            }
+        }
+        stage('Deploy-Green'){
+            steps{
+                withAWS(region:'ap-south-1', credentials:'AWSCreds'){
+                    sh 'make deploy-green'
+                }
             }
         }
     }
