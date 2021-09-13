@@ -57,7 +57,7 @@ pipeline {
                 }
             }
         }
-        stage('Deploy-frontend'){
+        stage('Deploy-Blue'){
             steps{
                 withAWS(region:'ap-south-1', credentials:'AWSCreds'){
                     sh 'make deploy'
