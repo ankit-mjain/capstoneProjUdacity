@@ -48,7 +48,7 @@ pipeline {
         stage('Deploy'){
             steps{
                 withAWS(region:'ap-south-1', credentials:'AWSCreds'){
-                    sh '/home/ubuntu/bin/kubectl version'
+                    sh '/home/ubuntu/bin/kubectl get nodes'
                 }
             }
         }
