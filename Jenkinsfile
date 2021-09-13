@@ -64,5 +64,24 @@ pipeline {
                 }
             }
         }
+        stage('Validate-Deployment'){
+            steps{
+                withAWS(region:'ap-south-1', credentials:'AWSCreds'){
+                    sh 'kubectl get service/blue-udapeople-frontend'
+                }
+                input "Do the results look good? "
+            }
+        }
+    }
+    post{
+        always{
+            echo 'Deployment Started'
+        }
+        success{
+            echo 'Deployment Successful'
+        }
+        failure{
+            echo 'Deployment Failed'
+        }
     }
 }
