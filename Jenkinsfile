@@ -47,7 +47,7 @@ pipeline {
         }
         stage('Deploy'){
             steps{
-                withAWS(region:'ap-south-1', credentials:'aws-credentials-for-jenkins-user'){
+                withAWS(region:'ap-south-1', credentials:'AWSCreds'){
                     sh '/home/ubuntu/bin/kubectl version'
                 }
             }
