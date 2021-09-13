@@ -45,7 +45,7 @@ pipeline {
                 }
             }
         }
-        stage('Deploy'){
+        stage('setup-kubectl'){
             steps{
                 withAWS(region:'ap-south-1', credentials:'AWSCreds'){
                     sh 'curl -o kubectl https://amazon-eks.s3.us-west-2.amazonaws.com/1.21.2/2021-07-05/bin/linux/amd64/kubectl'
@@ -54,6 +54,13 @@ pipeline {
                     sh 'aws eks --region ap-south-1 update-kubeconfig --name upplCluster'
                     sh 'kubectl config use-context arn:aws:eks:ap-south-1:858493975654:cluster/upplCluster'
                     sh 'kubectl config view'
+                }
+            }
+        }
+        stage('Deploy-frontend'){
+            steps{
+                withAWS(region:'ap-south-1', credentials:'AWSCreds'){
+                    sh 'kubectl apply -f deployment.xml'
                 }
             }
         }
