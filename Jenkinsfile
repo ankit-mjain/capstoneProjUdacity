@@ -48,7 +48,8 @@ pipeline {
         stage('Deploy'){
             steps{
                 withAWS(region:'ap-south-1', credentials:'AWSCreds'){
-                    sh 'kubectl config use-context arn:aws:eks:ap-south-1:858493975654:cluster/upplCluster'
+                    sh '/home/ubuntu/bin/kubectl config use-context arn:aws:eks:ap-south-1:858493975654:cluster/upplCluster'
+                    sh '/home/ubuntu/bin/kubectl config view'
                     sh '/home/ubuntu/bin/kubectl get nodes'
                 }
             }
