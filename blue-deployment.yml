@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       app: blue-udapeople
-   template:
+  template:
     metadata:
       labels:
         app: blue-udapeople
