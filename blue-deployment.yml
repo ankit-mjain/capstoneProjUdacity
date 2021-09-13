@@ -8,18 +8,17 @@ spec:
   selector:
     matchLabels:
       app: blue-udapeople
-    minReadySeconds: 5
-    template:
-      metadata:
-        labels:
-          app: blue-udapeople
-      spec:
-        containers:
-          - name: blue-frontend
-            image: docker.io/ankit4all/capstoneprojudacity:frontend
-            imagePullPolicy: IfNotPresent
-            ports:
-              - containerPort: 5000
+   template:
+    metadata:
+      labels:
+        app: blue-udapeople
+    spec:
+      containers:
+      - name: blue-frontend
+        image: docker.io/ankit4all/capstoneprojudacity:frontend
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
 
 ---
 apiVersion: v1
