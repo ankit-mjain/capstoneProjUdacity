@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: udapeople-test
   labels:
-    app: udapeople
+    app: blue-udapeople
 spec:
   replicas: 1
   selector:
@@ -28,7 +28,7 @@ metadata:
   name: blue-udapeople-frontend
 spec:
   selector:
-    app: udapeople
+    app: blue-udapeople
   ports:
     - protocol: TCP
       port: 5000
