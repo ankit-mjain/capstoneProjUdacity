@@ -5,6 +5,7 @@ metadata:
   labels:
     app: udapeople
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: blue-udapeople
