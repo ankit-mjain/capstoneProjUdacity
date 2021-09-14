@@ -22,6 +22,7 @@ This repository is associated with the capstone project. It contains a flask app
 - Deploy-Green: Green deployment if approved
 ```
 3) Create eksctl cluster using the below command. This command would setup clouformation stacks for setting up the cluster & node groups.
+
 ``- eksctl create cluster -y eksCluster.yml 
 ``
 4) Connect the github repository with the Jenkins server using Github webhooks & github credentials in Jenkins
