@@ -22,9 +22,12 @@ This repository is associated with the capstone project. It contains a flask app
 - Validate-Deployment: User to validate if he / she is fine with the deployment
 - Deploy-Green: Green deployment if approved
 ```
+
 3) Create eksctl cluster using the below command. This command would setup clouformation stacks for setting up the cluster & node groups.
 
-```eksctl create cluster -y eksCluster.yml ```
+``` 
+- eksctl create cluster -y eksCluster.yml 
+```
 
 4) Connect the github repository with the Jenkins server using Github webhooks & github credentials in Jenkins
 
@@ -34,5 +37,7 @@ This repository is associated with the capstone project. It contains a flask app
 
 7) Blue deployment is done first in the pipeline. Post which user is asked to confirm if he is fine with the deployment. If yes, then green deployment is done. Below command was used to deploy on the kubernetes cluster.
 
-```- kubectl apply -f blue-deployment.yml
-- kubectl apply -f green-deployment.yml ```
+```
+- kubectl apply -f blue-deployment.yml
+- kubectl apply -f green-deployment.yml 
+```
