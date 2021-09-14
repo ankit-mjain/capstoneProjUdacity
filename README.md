@@ -18,3 +18,5 @@ The above command would setup clouformation stacks for setting up the cluster & 
 5) Commit the code in Github which would automatically publish on the Jenkins pipeline 
 
 6) Used Dockerhub to upload the Docker images whic would be deployed on kubernetes cluster
+
+7) Blue deployment is done first in the pipeline. Post which user is asked to confirm if he is fine with the deployment. If yes, then green deployment is done. 
