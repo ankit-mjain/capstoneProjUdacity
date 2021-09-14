@@ -9,6 +9,7 @@ This repository is associated with the capstone project. It contains a flask app
 - https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/
 
 - Below is the list of pipeline stages which are listed in the Jenkinsfile 
+
 ```
 - Setup: Create initial setup for python/hadolint
 - Install: Install the project requirements
@@ -23,8 +24,8 @@ This repository is associated with the capstone project. It contains a flask app
 ```
 3) Create eksctl cluster using the below command. This command would setup clouformation stacks for setting up the cluster & node groups.
 
-``- eksctl create cluster -y eksCluster.yml 
-``
+```eksctl create cluster -y eksCluster.yml 
+```
 4) Connect the github repository with the Jenkins server using Github webhooks & github credentials in Jenkins
 
 5) Commit the code in Github which would automatically publish on the Jenkins pipeline 
@@ -33,5 +34,6 @@ This repository is associated with the capstone project. It contains a flask app
 
 7) Blue deployment is done first in the pipeline. Post which user is asked to confirm if he is fine with the deployment. If yes, then green deployment is done. Below command was used to deploy on the kubernetes cluster.
 
-- kubectl apply -f blue-deployment.yml
+```- kubectl apply -f blue-deployment.yml
 - kubectl apply -f green-deployment.yml
+```
